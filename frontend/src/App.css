@@ -1,0 +1,21 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.create-form input{
+    width: 300px;
+    padding:10px;
+    border-bottom: 2px solid;
+
+}
+
+
+.create-form button{
+    color: white;
+    padding:10px;
+background-color: black;
+cursor: pointer;
+}
