@@ -28,6 +28,12 @@ app.post('/add',(req,res)=>{
 
 // get route
 
+app.get('/todos',(req,res)=>{
+    TodoModel.find()
+    .then(result=>res.json(result))
+    .catch(err=>res.json(err))
+})
+
 
 const port = 3030;
 

@@ -8,6 +8,8 @@ const Home = () => {
     const [todos, setTodos] = useState([])
     useEffect(()=>{
         axios.get('http://localhost:3030/todos')
+        .then(result=>setTodos(result.data))
+        .catch(err=>console.log(err))
     },[])
     return (
         <div className='home'>
@@ -19,10 +21,12 @@ const Home = () => {
 
             {
                 todos.length === 0 ? <p>No todos</p> :
-                    todos.map((todo) => {
-                        <>
-                            {todo}
-                        </>
+                    todos.map(todo => {
+                        return(
+                        <div>
+                            {todo.task}
+                        </div>
+                        )
                     })
             }
 
