@@ -19,3 +19,41 @@
 background-color: black;
 cursor: pointer;
 }
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    padding: 10px;
+    border-bottom: 2px solid;
+    align-items: center;
+    color: white;
+    background-color: black;
+    height: 40px;
+    margin-top: 10px;
+}
+
+
+.checkbox{
+    display: flex;
+    align-items: center;
+}
+
+.checkbox .icon{
+    margin-right: 5px;
+    font-size: 15px;
+}
+
+.task div span{
+    margin: 0px 5px 0px 4px;
+}
+
+.task div .icon{
+    cursor: pointer;
+}
+
+
+.line_through{
+    text-decoration: line-through;
+    color: grey;
+}

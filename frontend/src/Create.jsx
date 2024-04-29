@@ -9,7 +9,7 @@ const Create = () => {
     function handleAdd() {
 
         axios.post('http://localhost:3030/add', { task: task }).then((res) => {   
-            console.log(res)
+            location.reload()
         }).catch((err) => {
             console.log(err)
         })

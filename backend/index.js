@@ -35,6 +35,31 @@ app.get('/todos',(req,res)=>{
 })
 
 
+// put 
+
+app.put('/update/:id',(req,res)=>{
+
+    const {id} = req.params;
+    TodoModel.findByIdAndUpdate({_id:id},{done:true})
+    .then(result=>res.json(result))
+    .catch(err=>res.json(err))
+
+
+})
+
+
+app.delete('/delete/:id',(req,res)=>{
+
+    const {id} = req.params;
+    TodoModel.findByIdAndDelete({_id:id})
+    .then(result=>res.json(result))
+    .catch(err=>res.json(err))
+
+
+})
+
+
+
 const port = 3030;
 
 
